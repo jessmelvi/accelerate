@@ -26,6 +26,8 @@
     
 }
 
+
+
 .blog-post {
 	width: 50%;
 }
@@ -59,4 +61,30 @@
 .primary-navigation ul li{
     display: inline;
     margin-right:  20px;
+}
+
+/*Case Studies */
+
+article.case-study{
+    margin:  40px 0 0 0;
+}
+
+aside.case-study-sidebar {
+    float: left;
+    width: 314px;
+    margin:  0 40px 0 0;
+}
+
+
+div.case-study-images {
+    float: left;
+    width: 606px;
+    
+}
+
+div.case-study-images img{
+    display: block;
+    margin-bottom:50px;
+    border: 1px solid #dddddd;
+    
 }
