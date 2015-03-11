@@ -55,7 +55,7 @@ function wp_new_excerpt($text)
 		$words = explode(' ', $text, $excerpt_length + 1);
 		if (count($words) > $excerpt_length) {
 			array_pop($words);
-			array_push($words);
+			
 			$text = implode(' ', $words);
 		}
 	}
