@@ -47,8 +47,15 @@ get_header(); ?>
 					</div>
 				</article>
 			<?php endwhile; endif; ?>
-
-			</div>
+            
+                <!-- Add the pagination functions here. -->    
+<div class="pagination">
+<?php next_posts_link( 'Older posts' ); ?>
+<?php previous_posts_link( 'Newer posts' ); ?>
+</div>
+			
+            
+            </div>
 			
 			<?php get_sidebar(); ?>
 		</div>

@@ -20,11 +20,40 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class='homepage-hero'>
 				<?php the_content(); ?>
-				<a class="button" href="<?php echo home_url(); ?>/blog">View Our Work</a>
+				<a class="button" href="<?php echo home_url(); ?>/case-studies">View Our Work</a>
 			</div>
 		<?php endwhile; // end of the loop. ?>
 	</div><!-- .container -->
 </section><!-- .home-page -->
+
+<section class="featured-work">
+    <div class="site-content">
+        <ul class="homepage-featured-work">
+            <div class="featured-work-wrapper">
+            <h1>Featured Work</h1>
+                    
+         <?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+            <?php while ( have_posts() ) : the_post(); 
+                $image_1 = get_field("image_1");
+                 $size = "medium";
+            ?>
+                <div class="individual-featured-work-wrapper">
+                <li class="individual-featured-work">
+                    <figure>
+                        <?php echo wp_get_attachment_image($image_1, $size); ?>
+                    </figure>
+                
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				</li>
+            
+			<?php endwhile; // end of the loop. ?>
+			<?php wp_reset_query(); // resets the altered query back to the original ?>
+                 </div><!-- end of .individual-featured-work-wrapper -->
+            </div> <!-- end of .featured-work-wrapper -->
+    </ul>
+    
+    </div>
+</section>
 
 <section class="recent-posts">
 	<div class="site-content">
@@ -37,7 +66,9 @@ get_header(); ?>
 				<a href="<?php the_permalink(); ?>" class="read-more-link">Read More <span>&rsaquo;</span></a>
 			<?php endwhile; // end of the loop. ?>
 			<?php wp_reset_query(); // resets the altered query back to the original ?>
-		</div>
+
+        
+        </div>
 
 	</div>
 </section>

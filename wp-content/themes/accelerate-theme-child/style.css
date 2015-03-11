@@ -12,6 +12,21 @@
 
 @import url("../accelerate-theme/style.css");
 
+/* Style clearing/fixes to webkits*/
+ul{
+    list-style-type: none;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+h2{
+margin:  0;
+}
+
+
 .home-page {
     background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
     
@@ -26,27 +41,47 @@
     
 }
 
-
+.pagination{
+    text-transform: uppercase;
+    font-size:  13px;
+    font-family: "Open Sans";
+    color: #150300;
+    margin: 25px 0 20px 35px;
+    font-weight: bold;
+}
 
 .blog-post {
 	width: 50%;
 }
 
 .blog-post h4 {
-	font-size: 16px;
+	font-size: 17px;
+    font-weight: bold;
 	font-family: 'Montserrat';
 	color: #a6a6a6;
 	text-transform: uppercase;
+    margin: 0 0 52px 0;
+    
 }
 
 .blog-post h2 {
 	font-size: 24px;
 	font-family: 'Montserrat';
 	font-weight: bold;
+    color: #3b3b3b;
+    margin:0 0 30px 0;
+}
+
+.blog-post p{
+    line-height: 29px;
+    font-size:  17px;
+    font-family: "Open Sans";
+    color: #3b3b3b;
+    margin: 0;
 }
 
 .blog-post .read-more-link {
-	font-size: 24px;
+	font-size: 15px;
 	font-family: 'Montserrat';
 	font-weight: bold;
 	color: #45ac9d;
@@ -71,20 +106,93 @@ article.case-study{
 
 aside.case-study-sidebar {
     float: left;
-    width: 314px;
-    margin:  0 40px 0 0;
+    width: 316px;
+    margin:  0 71px 0 0;
 }
 
 
 div.case-study-images {
-    float: left;
-    width: 606px;
+   float: left;
     
 }
 
 div.case-study-images img{
+     
+    width: 513px;
+    height: 381px;
     display: block;
     margin-bottom:50px;
     border: 1px solid #dddddd;
     
 }
+
+/*Homepage Featured Work Section    */
+
+.homepage-featured-work {
+    margin-bottom:  64px;
+    text-align: center;
+    
+}
+
+.site-content {
+    
+}
+
+.featured-work-wrapper {
+    height: 440px;
+    text-align:  center;  
+    
+  
+}
+.individual-featured-work-wrapper{
+    margin-left: 36px;
+    
+}
+
+ul.homepage-featured-work h1{
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    text-align:center;
+    margin-bottom: 48px;
+   text-transform: uppercase;
+    
+}
+
+ul.homepage-featured-work h3 a{
+    color: black;
+    font-size: 24px;
+    text-align:center;
+    margin-top:  24px;
+    font-family: "open sans";
+    font-weight: bold;
+}
+
+li.individual-featured-work {
+    list-style-type: none;
+    text-align:  center;
+    display: inline;
+    float: left;
+    margin:  0 15px;
+    
+}
+
+.case-study-sidebar h2{
+    font-family: "Open Sans Semibold" "open sans";
+    
+    font-size: 25px;
+    color: #3b3b3b;
+    margin-top: 28px;
+    margin-bottom: 18px;
+    
+}
+
+.case-study-sidebar h5{
+    font-family:  "Open Sans";
+    font-size:  14px;
+    color: #878787;
+    font-weight: normal;
+    margin-bottom: 28px;
+    margin-top:  0px;
+}
+
